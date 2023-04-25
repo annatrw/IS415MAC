@@ -4,10 +4,29 @@ title: "IS415: Geospatial Analytics & Applications"
 
 This is the Home page
 
--   table of contents
-
 -   links to each tab
 
 -   highlight 5-7 exercises with short description
 
--   introduction of geospatial analysis \[week 1 slides\]
+# Welcome!
+
+This site is separated into three tabs:
+
+1.  Hands On Exercises that are weekly exercises that are topic specific, honing specific analytical skills and introducing geospatial packages in R studio.
+2.  In Class Exercises that are content taught during lectures not covered in Hands On Exercises.
+3.  Take Home Exercises that are individual assignments assessing on the skills learnt in Hands On and In Class Exercises, and beyond.
+
+## Geographical Information System (GIS)
+
+GIS is a toolkit for creating, managing, analysing,visualising, and sharing data of any kind according to where it\'s located. [GIS](https://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/) can show various types of data including streets, buildings, and vegetation. This enables people to more easily see, analyze, and understand patterns and relationships.
+
+## Geospatial Analysis
+
+Geospatial Analytics is more than just GIS, mapping, or data visualisation. It enables insights not found in statistical maps to be uncovered, revealing the untapped property of spatial contiguity in geographical knowledge discovery, and enabling the modelling of spatial interactions. It provides decision makers and planners with data-
+driven information for better problem solving and efficient use of resources.
+
+It's motivation lies in the following areas:
+
+1.  Big data from 80% of organisations globally consists of a location component. Geographical data is powerful in sectors like business analytics, e-commerce, trade and more.
+2.  Singapore's push towards a [Smart Nation](https://www.straitstimes.com/singapore/singapore-needs-to-be-smart-city-to-stay-ahead-pm#sthash.aUxbyCei.dpuf) will see initiatives allowing access to maps, building up geospatial databases by contributing information such as animal sightings, traffic incidents or the best mee pok eateries.
+3.  Singapore's [Geospatial Masterplan](https://www.sla.gov.sg/qql/slot/u149/initiatives/Singapore-Geospatial-Master-Plan.pdf) is an initative by Singapore Land Authority (SLA) and the Government Technology Agency (GovTech) that aims to build a geospatial-powered Singapore to maximise the impact of geospatial information and technology for the economy and wider society.
