@@ -4,8 +4,12 @@ title: "About"
 
 # About Me
 
+![](images/welcome.png){fig-align="center" width="134"}
+
 I am Anna Tseng, a Year 3 School of Computing and Information Systems student majoring in Smart-City Management and Technology at Singapore Management University (SMU).
 
 # About This Site
+
+![](images/smu-logo.jpg){fig-align="center" width="275"}
 
 As part of IS415 Geospatial Analytics and Applications AY2022-23 Semester 2, this website was created to document and showcase the various geospatial analytics methods learned under the guidance of Prof Kam Tin Seong.
