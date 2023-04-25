@@ -1,0 +1,10 @@
+---
+title: "Hands-on Exercise 9: Geographical Segmentation with Spatially Constrained Clustering Techniques"
+date: "1 Mar 2023"
+date-modified: "`r Sys.Date()`"
+format: html
+execute: 
+  message: true 
+  warning: false
+editor: visual
+---

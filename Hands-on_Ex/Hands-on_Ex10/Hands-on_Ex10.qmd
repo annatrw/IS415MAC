@@ -1,5 +1,5 @@
 ---
-title: "Hands-on Exercise 10: "
+title: "Hands-on Exercise 10: Spatial Interaction Models"
 date: "20 Mar 2023"
 date-modified: "`r Sys.Date()`"
 format: html
@@ -8,6 +8,8 @@ execute:
   warning: false
 editor: visual
 ---
+
+Please refer to In-class exercise 10
 
 ```{r}
 

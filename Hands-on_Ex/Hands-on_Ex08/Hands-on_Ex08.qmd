@@ -243,7 +243,9 @@ summary(condo.slr)
 
 The output report reveals that the SELLING_PRICE can be explained by using the formula:
 
-      *y = -258121.1 + 14719x1*
+```         
+  *y = -258121.1 + 14719x1*
+```
 
 The R-squared of 0.4518 reveals that the simple regression model built is able to explain about 45% of the resale prices.
 
