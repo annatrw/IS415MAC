@@ -1,5 +1,5 @@
 ---
-title: "Hands-on Exercise 10: Project test"
+title: "Hands-on Exercise 10: "
 date: "20 Mar 2023"
 date-modified: "`r Sys.Date()`"
 format: html
@@ -9,8 +9,6 @@ execute:
 editor: visual
 ---
 
-
 ```{r}
 
 ```
- 
