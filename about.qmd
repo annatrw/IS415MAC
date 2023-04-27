@@ -4,7 +4,7 @@ title: "About"
 
 # About Me
 
-![](images/welcome.png){fig-align="center" width="134"}
+![](images/hello.png){fig-align="center" width="189"}
 
 I am Anna Tseng, a Year 3 School of Computing and Information Systems student majoring in Smart-City Management and Technology at Singapore Management University (SMU).
 

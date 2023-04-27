@@ -8,6 +8,8 @@ This is the Home page
 
 -   highlight 5-7 exercises with short description
 
+![](images/welcome.png){fig-align="center" width="200"}
+
 # Welcome!
 
 This site is separated into three tabs:
@@ -18,12 +20,15 @@ This site is separated into three tabs:
 
 ## Geographical Information System (GIS)
 
-GIS is a toolkit for creating, managing, analysing,visualising, and sharing data of any kind according to where it\'s located. [GIS](https://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/) can show various types of data including streets, buildings, and vegetation. This enables people to more easily see, analyze, and understand patterns and relationships.
+![](images/gis.png){fig-align="center" width="175"}
+
+GIS is a toolkit for creating, managing, analysing,visualising, and sharing data of any kind according to where it's located. [GIS](https://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/) can show various types of data including streets, buildings, and vegetation. This enables people to more easily see, analyze, and understand patterns and relationships.
 
 ## Geospatial Analysis
 
-Geospatial Analytics is more than just GIS, mapping, or data visualisation. It enables insights not found in statistical maps to be uncovered, revealing the untapped property of spatial contiguity in geographical knowledge discovery, and enabling the modelling of spatial interactions. It provides decision makers and planners with data-
-driven information for better problem solving and efficient use of resources.
+![](images/planet.png){fig-align="center" width="187"}
+
+Geospatial Analytics is more than just GIS, mapping, or data visualisation. It enables insights not found in statistical maps to be uncovered, revealing the untapped property of spatial contiguity in geographical knowledge discovery, and enabling the modelling of spatial interactions. It provides decision makers and planners with data- driven information for better problem solving and efficient use of resources.
 
 It's motivation lies in the following areas:
 
