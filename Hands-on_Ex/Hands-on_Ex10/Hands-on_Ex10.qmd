@@ -9,8 +9,8 @@ execute:
 editor: visual
 ---
 
+::: callout-tip
+## NOTE
+
 Please refer to In-class exercise 10
-
-```{r}
-
-```
+:::

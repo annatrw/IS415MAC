@@ -1565,7 +1565,7 @@
     "href": "Hands-on_Ex/Hands-on_Ex10/Hands-on_Ex10.html",
     "title": "Hands-on Exercise 10: Spatial Interaction Models",
     "section": "",
-    "text": "Please refer to In-class exercise 10"
+    "text": "NOTE\n\n\n\nPlease refer to In-class exercise 10"
   },
   {
     "objectID": "Hands-on_Ex/Hands-on_Ex07_GLSA/Hands-on_Ex07_GLSA.html",
@@ -1699,5 +1699,12 @@
     "title": "Hands-on Exercise 7: Global / Local Measures of Spatial Autocorrelation",
     "section": "9.2 Adaptive Distance",
     "text": "9.2 Adaptive Distance\n\nfips <- order(hunan$County)\ngi.adaptive <- localG(hunan$GDPPC, knn_lw)\nhunan.gi <- cbind(hunan, as.matrix(gi.adaptive)) %>%\n  rename(gstat_adaptive = as.matrix.gi.adaptive.)\n\n\n9.2.1 Mapping Gi Values\n\ngdppc<- qtm(hunan, \"GDPPC\")\n\nGimap <- tm_shape(hunan.gi) + \n  tm_fill(col = \"gstat_adaptive\", \n          style = \"pretty\", \n          palette=\"-RdBu\", \n          title = \"local Gi\") + \n  tm_borders(alpha = 0.5)\n\ntmap_arrange(gdppc, \n             Gimap, \n             asp=1, \n             ncol=2)"
+  },
+  {
+    "objectID": "Hands-on_Ex/Hands-on_Ex07_EHSA/Hands-on_Ex07_EHSA.html",
+    "href": "Hands-on_Ex/Hands-on_Ex07_EHSA/Hands-on_Ex07_EHSA.html",
+    "title": "Hands-on Exercise 7 (part 2): Local Measures of Spatial Autocorrelation",
+    "section": "",
+    "text": "NOTE\n\n\n\nPlease refer to In-class Exercise 7"
   }
 ]

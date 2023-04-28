@@ -8,3 +8,9 @@ execute:
   warning: false
 editor: visual
 ---
+
+::: callout-tip
+## NOTE
+
+Please refer to In-class Exercise 7
+:::
