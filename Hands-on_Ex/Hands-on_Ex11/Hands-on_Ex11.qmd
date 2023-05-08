@@ -14,7 +14,7 @@ editor: visual
 New package: </a href="https://cran.r-project.org/web/packages/SpatialAcc/SpatialAcc.pdf"> SpatialAcc <a>
 
 ```{r}
-pacman::p_load(tmap, SpatialAcc, sf, 
+pacman::p_load(tmap, SpatialAcc, sf, sp,
                ggstatsplot, reshape2,
                tidyverse)
 ```
@@ -108,10 +108,23 @@ Currently, the distance is measured in metre because SVY21 projected coordinate 
 distmat_km <- as.matrix(distmat/1000)
 ```
 
-# Modelling Accessibility using Hansen Method
+# Modelling Accessibility: Hansen Method
+
+[Hansen Accessibility Model](http://frontdesk.co.in/planning/land-use-and-transport-planning/hansen-accessibility-model/#:~:text=Hansen%20Accessibility%20Model%20(1959)%20is,other%20activity%20in%20the%20region%20.) (1959) is based upon concept that the more accessible an area is to various activities and the more vacant land area has greater growth potential. This accessibility of an area is an index representing the closeness of area to all other activity in the region. HAM calculates the accessibility of each zone by considering the distance to other zones and the population or employment base of each zone. The model then generates a series of accessibility values that reflect the ease with which people can reach different parts of the city using different transportation modes.
+
+## Compute Hansen Accessibility
+
+Now, we ready to compute Hansen\'s accessibility by using *ac()* of [**SpatialAcc**](https://cran.r-project.org/web/packages/SpatialAcc/) package. Before getting started, you are encourage to read the [arguments](https://cran.r-project.org/web/packages/SpatialAcc/SpatialAcc.pdf) of the function at least once in order to ensure that the required inputs are available.
+
+The code chunk below calculates Hansen\'s accessibility using *ac()* of **SpatialAcc** and *data.frame()* is used to save the output in a data frame called `acc_Handsen`.
 
 ```{r}
-
+acc_Hansen <- data.frame(ac(hexagons$demand,
+                            eldercare$capacity,
+                            distmat_km, 
+                            #d0 = 50,
+                            power = 2, 
+                            family = "Hansen"))
 ```
 
 ```{r}
@@ -122,17 +135,21 @@ distmat_km <- as.matrix(distmat/1000)
 
 ```
 
-## Visualising Model Output
+```{r}
+
+```
+
+# Modelling Accessibility: KD2SFCA Method
 
 ```{r}
 
 ```
 
-# Modelling Accessibility using KD2SFCA Method
-
 ```{r}
 
 ```
+
+# Modelling Accessibility: Spatial Accessibility Measure Method
 
 ```{r}
 
