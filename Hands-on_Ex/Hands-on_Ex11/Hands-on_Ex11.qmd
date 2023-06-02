@@ -75,12 +75,26 @@ eldercare <- st_read(dsn = "data/geospatial", layer = "ELDERCARE")
 
 ```{r}
 mpsz <- st_transform(mpsz, 3414)
-hezagons <- st_transform(hexagons, 3414)
+hexagons <- st_transform(hexagons, 3414)
 eldercare <- st_transform(eldercare, 3414)
 ```
 
 ```{r}
 st_crs(mpsz)
+```
+
+There are many redundant fields in the data tables of both `eldercare` and `hexagons`. The code chunks below will be used to exclude those redundant fields. At the same time, a new field called `demand` and a new field called `capacity` will be added into the data table of `hexagons` and `eldercare` sf data frame respectively. Both fields are derive using *mutate()* of **dplyr** package.
+
+```{r}
+eldercare <- eldercare %>%
+  select(fid, ADDRESSPOS) %>%
+  mutate(capacity = 100)
+```
+
+```{r}
+hexagons <- hexagons %>%
+  select(fid) %>%
+  mutate(demand = 100)
 ```
 
 # Aspatial Data Wrangling
@@ -127,16 +141,72 @@ acc_Hansen <- data.frame(ac(hexagons$demand,
                             family = "Hansen"))
 ```
 
-```{r}
+Change the field name to accHansen:
 
+```{r}
+colnames(acc_Hansen) <- "accHansen"
+```
+
+Convert data table to tibble format and join the geometry column from the hexagons data.
+
+```{r}
+acc_Hansen <- tbl_df(acc_Hansen)
+hexagon_Hansen <- bind_cols(hexagons, acc_Hansen)
+```
+
+## Visualise Hansen Accessibility
+
+Extract the map extend to get the boundaries of the study area.
+
+```{r}
+mapex <- st_bbox(hexagons)
 ```
 
 ```{r}
+tmap_mode("plot")
+tm_shape(hexagon_Hansen,
+         bbox = mapex) + 
+  tm_fill(col = "accHansen",
+          n = 10,
+          style = "quantile",
+          border.col = "black",
+          border.lwd = 1) +
+tm_shape(eldercare) +
+  tm_symbols(size = 0.1) +
+  tm_layout(main.title = "Accessibility to eldercare: Hansen method",
+            main.title.position = "center",
+            main.title.size = 2,
+            legend.outside = FALSE,
+            legend.height = 0.45, 
+            legend.width = 3.0,
+            legend.format = list(digits = 6),
+            legend.position = c("right", "top"),
+            frame = TRUE) +
+  tm_compass(type="8star", size = 2) +
+  tm_scale_bar(width = 0.15) +
+  tm_grid(lwd = 0.1, alpha = 0.5)
+```
 
+## Statistical Visualisation
+
+In this section, we are going to compare the distribution of Hansen\'s accessibility values by URA Planning Region.
+
+Firstly, we need to add the planning region field into *haxegon_Hansen* simple feature data frame by using the code chunk below.
+
+```{r}
+hexagon_Hansen <- st_join(hexagon_Hansen, mpsz, 
+                          join = st_intersects)
 ```
 
 ```{r}
-
+ggplot(data=hexagon_Hansen, 
+       aes(y = log(accHansen), 
+           x= REGION_N)) +
+  geom_boxplot() +
+  geom_point(stat="summary", 
+             fun.y="mean", 
+             colour ="red", 
+             size=2)
 ```
 
 # Modelling Accessibility: KD2SFCA Method
